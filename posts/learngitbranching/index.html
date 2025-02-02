@@ -107,7 +107,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "8029"
+    "wordCount": "8023"
   }]
   </script>
 
@@ -458,7 +458,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-02T14:08:54&#43;08:00">2025 February 2</time><span class="px-2 text-primary-500">&middot;</span><span>8029 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">17 分钟</span>
+  <time datetime="2025-02-02T14:08:54&#43;08:00">2025 February 2</time><span class="px-2 text-primary-500">&middot;</span><span>8023 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">17 分钟</span>
   
 
   
@@ -749,11 +749,11 @@ HEAD 通常情况下是指向分支名的（如 bugFix）。<br>
     </span>        
     
 </h4>
-<p>“如果你想在提交树中向上移动很多步的话，敲那么多 ^ 貌似也挺烦人的，Git 当然也考虑到了这一点，于是又引入了操作符 <del>。<br>
+<p>“如果你想在提交树中向上移动很多步的话，敲那么多 ^ 貌似也挺烦人的，Git 当然也考虑到了这一点，于是又引入了操作符 ~ 。 <br>
 该操作符后面可以跟一个数字（可选，不跟数字时与 ^ 相同，向上移动一次），指定向上移动多少次.<br>
 你现在是相对引用的专家了，现在用它来做点实际事情。<br>
 我(指网站作者）使用相对引用最多的就是移动分支。可以直接使用 -f 选项让分支指向另一个提交。例如:<br>
-git branch -f main HEAD</del>3<br>
+git branch -f main HEAD~3<br>
 上面的命令会将 main 分支强制指向 HEAD 的第 3 级 parent 提交。”</p>
 <p>接下来是题目分析: 可以观察到，题目要求： 将当前分支（HEAD)判定在C1点上 main从C4移动到C6 bugFix从C5到C0<br>
 还记得前文作者在引入时提到的“git branch -f A B&quot;可以将A分支强行指向B吗？ 逃课小寄巧+1 da⭐ze</p>
@@ -1103,101 +1103,238 @@ git branch -f three C2
     </span>        
     
 </h3>
-<p>BGM:秘匿されたフォーシーズンズ~The Concealed Four Seasons
-EX1 Push &amp; Pull —— Git 远程仓库！
-是时候分享你的代码了，让编码变得社交化吧
-EX1.1 Git Clone
-从技术上来讲，git clone 命令在真实的环境下的作用是在本地创建一个远程仓库的拷贝（比如从 github.com）。 但在教程中使用这个命令会有一些不同 —— 它会在远程创建一个你本地仓库的副本。显然这和真实命令的意思刚好相反，但是它帮咱们把本地仓库和远程仓库关联到了一起，在教程中就凑合着用吧。
-本关同样以体验为主，可以自己尝试
-解如下！
-只要 git clone 就可以了!
-EX2.1 远程分支
-这下真有o了，但是它是origin即对远程仓库的默认名称的缩写。
-仍然体验为主。
-git commit
+<p>BGM:秘匿されたフォーシーズンズ~The Concealed Four Seasons</p>
+
+
+<h3 class="relative group">EX1 Push &amp; Pull —— Git 远程仓库！ 
+    <div id="ex1-push--pull--git-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex1-push--pull--git-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>是时候分享你的代码了，让编码变得社交化吧</p>
+
+
+<h4 class="relative group">EX1.1 Git Clone 
+    <div id="ex11-git-clone" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex11-git-clone" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>从技术上来讲，git clone 命令在真实的环境下的作用是在本地创建一个远程仓库的拷贝（比如从 github.com）。 但在教程中使用这个命令会有一些不同 —— 它会在远程创建一个你本地仓库的副本。显然这和真实命令的意思刚好相反，但是它帮咱们把本地仓库和远程仓库关联到了一起，在教程中就凑合着用吧。<br>
+本关同样以体验为主，可以自己尝试<br>
+解如下！<br>
+只要 <code>git clone </code>就可以了!</p>
+
+
+<h4 class="relative group">EX2.1 远程分支 
+    <div id="ex21-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex21-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>这下真有o了，但是它是origin即对远程仓库的默认名称的缩写。<br>
+仍然体验为主。</p>
+<pre tabindex="0"><code>git commit 
 git checkout o/main
 git commit
-EX1.3 Git Fetch
-git fetch 完成了仅有的但是很重要的两步:
-从远程仓库下载本地仓库中缺失的提交记录 更新远程分支指针(如 o/main) git fetch 实际上将本地仓库中的远程分支更新成了远程仓库相应分支最新的状态。
-如果你还记得上一节课程中我们说过的，远程分支反映了远程仓库在你最后一次与它通信时的状态，git fetch 就是你与远程仓库通信的方式了！希望我说的够明白了，你已经了解 git fetch 与远程分支之间的关系了吧。
-git fetch 通常通过互联网（使用 http:// 或 git:// 协议) 与远程仓库通信。
-还是体验 所以 git fetch就好
-EX1.4 Git Pull
-实际上，由于先抓取更新再合并到本地分支这个流程很常用，因此 Git 提供了一个专门的命令来完成这两个操作。它就是我们要讲的 git pull。
-也就是说，git pull是git fetch和git merge的缩写。
-本关运行 git pull 命令就可以了！
-EX1.5 模拟团队合作
-按照题意一步一步来</p>
-<p>解释
-git clone //先在本地克隆远程仓库
+</code></pre>
+
+<h4 class="relative group">EX1.3 Git Fetch 
+    <div id="ex13-git-fetch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex13-git-fetch" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>git fetch 完成了仅有的但是很重要的两步:<br>
+从远程仓库下载本地仓库中缺失的提交记录 更新远程分支指针(如 o/main) git fetch 实际上将本地仓库中的远程分支更新成了远程仓库相应分支最新的状态。<br>
+如果你还记得上一节课程中我们说过的，远程分支反映了远程仓库在你最后一次与它通信时的状态，git fetch 就是你与远程仓库通信的方式了！希望我说的够明白了，你已经了解 git fetch 与远程分支之间的关系了吧。<br>
+git fetch 通常通过互联网（使用 http:// 或 git:// 协议) 与远程仓库通信。<br>
+还是体验 所以 <code>git fetch</code>就好</p>
+
+
+<h4 class="relative group">EX1.4 Git Pull 
+    <div id="ex14-git-pull" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex14-git-pull" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>实际上，由于先抓取更新再合并到本地分支这个流程很常用，因此 Git 提供了一个专门的命令来完成这两个操作。它就是我们要讲的 git pull。<br>
+也就是说，git pull是git fetch和git merge的缩写。<br>
+本关运行 ``git pull `命令就可以了！</p>
+
+
+<h4 class="relative group">EX1.5 模拟团队合作 
+    <div id="ex15-%E6%A8%A1%E6%8B%9F%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex15-%E6%A8%A1%E6%8B%9F%E5%9B%A2%E9%98%9F%E5%90%88%E4%BD%9C" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>按照题意一步一步来</p>
+<pre tabindex="0"><code>git clone //先在本地克隆远程仓库
 git fakeTeamwork main 2//按照图表在远程模拟2次更改
 git commit//按照图标在本地进行一次提交
-git pull//在本地拉取远程更改<br>
-EX1.6 Git Push
-git push 负责将你的变更上传到指定的远程仓库，并在远程仓库上合并你的新提交记录。一旦 git push 完成, 你的朋友们就可以从这个远程仓库下载你分享的成果了！
-你可以将 git push 想象成发布你成果的命令。它有许多应用技巧，稍后我们会了解到，但是咱们还是先从基础的开始吧……
-解： 非常简单，看图写写就好
-git commit
+git pull//在本地拉取远程更改 
+</code></pre>
+
+<h4 class="relative group">EX1.6 Git Push 
+    <div id="ex16-git-push" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex16-git-push" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>git push 负责将你的变更上传到指定的远程仓库，并在远程仓库上合并你的新提交记录。一旦 git push 完成, 你的朋友们就可以从这个远程仓库下载你分享的成果了！<br>
+你可以将 git push 想象成发布你成果的命令。它有许多应用技巧，稍后我们会了解到，但是咱们还是先从基础的开始吧……<br>
+解： 非常简单，看图写写就好</p>
+<pre tabindex="0"><code>git commit
 git commit
 git push
-EX1.7 偏离的提交历史
-情景非常真实，泪目了（
-git pull 就是 fetch 和 merge 的简写
-git pull &ndash;rebase 就是 fetch 和 rebase 的简写！
+</code></pre>
+
+<h4 class="relative group">EX1.7 偏离的提交历史 
+    <div id="ex17-%E5%81%8F%E7%A6%BB%E7%9A%84%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex17-%E5%81%8F%E7%A6%BB%E7%9A%84%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>情景非常真实，泪目了（<br>
+git pull 就是 fetch 和 merge 的简写<br>
+git pull &ndash;rebase 就是 fetch 和 rebase 的简写！<br>
 按照明确的工作流，解如下：</p>
-<p>解释
-git clone
+<pre tabindex="0"><code>git clone
 git fakeTeamwork
 git commit
-git pull &ndash;rebase
+git pull --rebase
 git push
-EX1.8 锁定的main
-由已知得：</p>
-<p>解释
-git branch feature
-//本地创建feature分支<br>
+</code></pre>
+
+<h4 class="relative group">EX1.8 锁定的main 
+    <div id="ex18-%E9%94%81%E5%AE%9A%E7%9A%84main" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex18-%E9%94%81%E5%AE%9A%E7%9A%84main" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>由已知得：</p>
+<pre tabindex="0"><code>git branch feature 
+//本地创建feature分支  
 git reset o/main //重置main
 git push //推送新的
-EXTRA 1 ALL CLEAR!!!
-EXTRA 2 关于 origin 和它的周边—Git远程仓库高级操作
-做一名仁慈的独裁者一定会很有趣……
-EX2.1推送主分支
-关卡描述看似很难？照样击破它！
-首先我们注意到，远程有C8，但本地没C8
-所以先想办法把C8拉过来,顺带一提，这里不能直接pull &ndash;rebase,可以用fetch
-拉过本地后把其他的C拉到C8下按顺序排好
-最后推送到远端
+</code></pre>
+
+<h3 class="relative group">EXTRA 1 ALL CLEAR!!! 
+    <div id="extra-1-all-clear" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#extra-1-all-clear" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+
+<h3 class="relative group">EXTRA 2 关于 origin 和它的周边—Git远程仓库高级操作 
+    <div id="extra-2-%E5%85%B3%E4%BA%8E-origin-%E5%92%8C%E5%AE%83%E7%9A%84%E5%91%A8%E8%BE%B9git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#extra-2-%E5%85%B3%E4%BA%8E-origin-%E5%92%8C%E5%AE%83%E7%9A%84%E5%91%A8%E8%BE%B9git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>做一名仁慈的独裁者一定会很有趣……</p>
+
+
+<h4 class="relative group">EX2.1推送主分支 
+    <div id="ex21%E6%8E%A8%E9%80%81%E4%B8%BB%E5%88%86%E6%94%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex21%E6%8E%A8%E9%80%81%E4%B8%BB%E5%88%86%E6%94%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>关卡描述看似很难？照样击破它！<br>
+首先我们注意到，远程有C8，但本地没C8<br>
+所以先想办法把C8拉过来,顺带一提，这里不能直接pull &ndash;rebase,可以用fetch<br>
+拉过本地后把其他的C拉到C8下按顺序排好<br>
+最后推送到远端<br>
 解一：</p>
-<p>解释
-git fetch
+<pre tabindex="0"><code>git fetch
 git checkout o/main
 git cherry-pick side1 C3 side2 C5 C6 side3
-git branch -f main C7&rsquo;
-git branch -f side1 C2&rsquo;
-git branch -f side2 C4&rsquo;
-git branch -f side3 C7&rsquo;
+git branch -f main C7&#39;
+git branch -f side1 C2&#39;
+git branch -f side2 C4&#39;
+git branch -f side3 C7&#39;
 git checkout main
 git push
-初见过于依赖cherry-pick的后果是(9/6)比较繁琐
+</code></pre><p>初见过于依赖cherry-pick的后果是(9/6)比较繁琐<br>
 让我们show sloution一下</p>
-<p>解释
-git fetch
+<pre tabindex="0"><code>git fetch
 git rebase o/main side1
 git rebase side1 side2
 git rebase side2 side3
 git rebase side3 main
 git push
-标准答案用的是rebase解(6/6)
-EX2.2合并远程仓库
-在开发社区里，有许多关于 merge 与 rebase 的讨论。以下是关于 rebase 的优缺点：
-优点:
-Rebase 使你的提交树变得很干净, 所有的提交都在一条线上
-缺点:
-Rebase 修改了提交树的历史
+</code></pre><p>标准答案用的是rebase解(6/6)</p>
+
+
+<h4 class="relative group">EX2.2合并远程仓库 
+    <div id="ex22%E5%90%88%E5%B9%B6%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex22%E5%90%88%E5%B9%B6%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>在开发社区里，有许多关于 merge 与 rebase 的讨论。以下是关于 rebase 的优缺点：<br>
+优点:<br>
+Rebase 使你的提交树变得很干净, 所有的提交都在一条线上<br>
+缺点:<br>
+Rebase 修改了提交树的历史<br>
 解：用merge替换上题的rebase 初见解（10/6）：</p>
-<p>解释
-git fetch
+<pre tabindex="0"><code>git fetch
 git checkout side1
 git merge C8
 git merge C4
@@ -1207,28 +1344,37 @@ git branch -f main C11
 git push
 git checkout main
 git push
-优化一下(8/6):</p>
-<p>解释
-git checkout C2
+</code></pre><p>优化一下(8/6):</p>
+<pre tabindex="0"><code>git checkout C2 
 git merge C8
-git merge C4
+git merge C4 
 git merge C7
 git branch -f main C11
 git checkout main
 git push
-剩下的优化下次一定，能跑就行.jpg
-EX2.3 远程跟踪分支
-你可以让任意分支跟踪 o/main, 然后该分支会像 main 分支一样得到隐含的 push 目的地以及 merge 的目标。 这意味着你可以在分支 totallyNotMain 上执行 git push，将工作推送到远程仓库的 main 分支上。
-有两种方法设置这个属性，第一种就是通过远程分支切换到一个新的分支，执行:
-git checkout -b totallyNotMain o/main
+</code></pre><p>剩下的优化下次一定，能跑就行.jpg</p>
+
+
+<h3 class="relative group">EX2.3 远程跟踪分支 
+    <div id="ex23-%E8%BF%9C%E7%A8%8B%E8%B7%9F%E8%B8%AA%E5%88%86%E6%94%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex23-%E8%BF%9C%E7%A8%8B%E8%B7%9F%E8%B8%AA%E5%88%86%E6%94%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>你可以让任意分支跟踪 o/main, 然后该分支会像 main 分支一样得到隐含的 push 目的地以及 merge 的目标。 这意味着你可以在分支 totallyNotMain 上执行 git push，将工作推送到远程仓库的 main 分支上。<br>
+有两种方法设置这个属性，第一种就是通过远程分支切换到一个新的分支，执行:<br>
+<code>git checkout -b totallyNotMain o/main  </code>
 就可以创建一个名为 totallyNotMain 的分支，它跟踪远程分支 o/main。</p>
-<p>另一种设置远程追踪分支的方法就是使用：git branch -u 命令，执行：
-git branch -u o/main foo
+<p>另一种设置远程追踪分支的方法就是使用：git branch -u 命令，执行：<br>
+<code>git branch -u o/main foo</code>
 这样 foo 就会跟踪 o/main 了。如果当前就在 foo 分支上, 还可以省略 foo：
-git branch -u o/main</p>
+<code>git branch -u o/main  </code></p>
 <p>我们要做到不切换到main的前提完成本关，因此得采取一些特殊技巧</p>
-<p>解释
-git checkout -b side
+<pre tabindex="0"><code>git checkout -b side
 git branch -u o/main side
 git pull
 git checkout C1
@@ -1237,55 +1383,112 @@ git checkout side
 git cherry-pick C3
 git push
 //（8/4）压代码？下次一定，没checkout main就是胜利
-EX2.4Git push 的参数
-很好! 既然你知道了远程跟踪分支，我们可以开始揭开 git push、fetch 和 pull 的神秘面纱了。我们会逐个介绍这几个命令，它们在理念上是非常相似的。
-首先来看 git push。在远程跟踪课程中，你已经学到了 Git 是通过当前所在分支的属性来确定远程仓库以及要 push 的目的地的。这是未指定参数时的行为，我们可以为 push 指定参数，语法是：
-git push <remote> <place>
-<place> 参数是什么意思呢？我们稍后会深入其中的细节, 先看看例子, 这个命令是:
-git push origin main
-把这个命令翻译过来就是：
-切到本地仓库中的“main”分支，获取所有的提交，再到远程仓库“origin”中找到“main”分支，将远程仓库中没有的提交记录都添加上去，搞定之后告诉我。
-我们通过“place”参数来告诉 Git 提交记录来自于 main, 要推送到远程仓库中的 main。它实际就是要同步的两个仓库的位置。
+</code></pre>
+
+<h4 class="relative group">EX2.4Git push 的参数 
+    <div id="ex24git-push-%E7%9A%84%E5%8F%82%E6%95%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex24git-push-%E7%9A%84%E5%8F%82%E6%95%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>很好! 既然你知道了远程跟踪分支，我们可以开始揭开 git push、fetch 和 pull 的神秘面纱了。我们会逐个介绍这几个命令，它们在理念上是非常相似的。<br>
+首先来看 git push。在远程跟踪课程中，你已经学到了 Git 是通过当前所在分支的属性来确定远程仓库以及要 push 的目的地的。这是未指定参数时的行为，我们可以为 push 指定参数，语法是：<br>
+<code>git push &lt;remote&gt; &lt;place&gt;</code>
+<place> 参数是什么意思呢？我们稍后会深入其中的细节, 先看看例子, 这个命令是:<br>
+<code>git push origin main  </code>
+把这个命令翻译过来就是：<br>
+切到本地仓库中的“main”分支，获取所有的提交，再到远程仓库“origin”中找到“main”分支，将远程仓库中没有的提交记录都添加上去，搞定之后告诉我。<br>
+我们通过“place”参数来告诉 Git 提交记录来自于 main, 要推送到远程仓库中的 main。它实际就是要同步的两个仓库的位置。<br>
 需要注意的是，因为我们通过指定参数告诉了 Git 所有它需要的信息, 所以它就忽略了我们所切换分支的属性！</p>
-<p>以上为网站作者废话 以下两行解决：
-git push origin main
+<p>以上为网站作者废话 以下两行解决：</p>
+<pre tabindex="0"><code>git push origin main
 git push origin foo
-EX2.5Git push 参数 2
-来看看git的离谱操作：如果来源和去向分支的名称不同,同样可以做到
-要同时为源和目的地指定 <place> 的话，只需要用冒号 : 将二者连起来就可以了：
-git push origin <source>:<destination>
+</code></pre>
+
+<h4 class="relative group">EX2.5Git push 参数 2 
+    <div id="ex25git-push-%E5%8F%82%E6%95%B0-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex25git-push-%E5%8F%82%E6%95%B0-2" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>来看看git的离谱操作：如果来源和去向分支的名称不同,同样可以做到<br>
+要同时为源和目的地指定 <place> 的话，只需要用冒号 : 将二者连起来就可以了：<br>
+<code>git push origin &lt;source&gt;:&lt;destination&gt;</code>
 这个参数实际的值是个 refspec，“refspec” 是一个自造的词，意思是 Git 能识别的位置（比如分支 foo 或者 HEAD~1）</p>
-<p>以上还是废话 非常简单！
-git push origin C6^:foo
+<p>以上还是废话 非常简单！</p>
+<pre tabindex="0"><code>git push origin C6^:foo
 git push origin foo:main
-EX2.6Git fetch 的参数
-git fetch 的参数和 git push 极其相似。他们的概念是相同的，只是方向相反罢了（因为现在你是下载，而非上传） 解：</p>
-<p>解释
-git fetch origin foo:main
+</code></pre>
+
+<h3 class="relative group">EX2.6Git fetch 的参数 
+    <div id="ex26git-fetch-%E7%9A%84%E5%8F%82%E6%95%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex26git-fetch-%E7%9A%84%E5%8F%82%E6%95%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>git fetch 的参数和 git push 极其相似。他们的概念是相同的，只是方向相反罢了（因为现在你是下载，而非上传）<br>
+解：</p>
+<pre tabindex="0"><code>git fetch origin foo:main
 git fetch origin main^:foo
 git checkout foo
 git merge main
-EX2.7没有 source 的 source
-古怪的 <source> Git 有两种关于 <source> 的用法是比较诡异的，即你可以在 git push 或 git fetch 时不指定任何 source，方法就是仅保留冒号和 destination 部分，source 部分留空。
-git push origin :side git fetch origin :bugFix
-如果 push 空 到远程仓库会如何呢？它会删除远程仓库中的分支！ 如果 fetch 空 到本地，会在本地创建一个新分支。
-这个关卡很容易 —— 只要删除一个远程的分支, 再用 git fetch 在本地创建一个新分支就可以了！ 解如下：
-git push origin :foo
+</code></pre>
+
+<h4 class="relative group">EX2.7没有 source 的 source 
+    <div id="ex27%E6%B2%A1%E6%9C%89-source-%E7%9A%84-source" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex27%E6%B2%A1%E6%9C%89-source-%E7%9A%84-source" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>古怪的 <source><br>
+Git 有两种关于 <source> 的用法是比较诡异的，即你可以在 git push 或 git fetch 时不指定任何 source，方法就是仅保留冒号和 destination 部分，source 部分留空。<br>
+<code>git push origin :side git fetch origin :bugFix</code><br>
+如果 push 空 到远程仓库会如何呢？它会删除远程仓库中的分支！<br>
+如果 fetch 空 到本地，会在本地创建一个新分支。<br>
+这个关卡很容易 —— 只要删除一个远程的分支, 再用 git fetch 在本地创建一个新分支就可以了！<br>
+解如下：</p>
+<pre tabindex="0"><code>git push origin :foo
 git fetch origin :bar
-EX2.8Git pull 的参数
-终于来到最后一关辣！
-既然你已经掌握关于 git fetch 和 git push 参数的方方面面了，关于 git pull 几乎没有什么可以讲的了 :)
-因为 git pull 到头来就是 fetch 后跟 merge 的缩写。你可以理解为用同样的参数执行 git fetch，然后再 merge 你所抓取到的提交记录。
-以下命令在 Git 中是等效的:
-git pull origin foo 相当于：
-git fetch origin foo; git merge o/foo
-还有&hellip;
-git pull origin bar<del>1:bugFix 相当于：
-git fetch origin bar</del>1:bugFix; git merge bugFix
+</code></pre>
+
+<h4 class="relative group">EX2.8Git pull 的参数 
+    <div id="ex28git-pull-%E7%9A%84%E5%8F%82%E6%95%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ex28git-pull-%E7%9A%84%E5%8F%82%E6%95%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>终于来到最后一关辣！<br>
+既然你已经掌握关于 git fetch 和 git push 参数的方方面面了，关于 git pull 几乎没有什么可以讲的了 :)<br>
+因为 git pull 到头来就是 fetch 后跟 merge 的缩写。你可以理解为用同样的参数执行 git fetch，然后再 merge 你所抓取到的提交记录。<br>
+以下命令在 Git 中是等效的:<br>
+<code>git pull origin foo </code>相当于：<br>
+<code>git fetch origin foo; git merge o/foo</code>
+还有&hellip;<br>
+<code>git pull origin bar~1:bugFix </code>相当于：<br>
+<code>git fetch origin bar~1:bugFix; git merge bugFix</code>
 看到了? git pull 实际上就是 fetch + merge 的缩写, git pull 唯一关注的是提交最终合并到哪里（也就是为 git fetch 所提供的 destination 参数）</p>
 <p>好啦, 该结束了！请按照目标窗口中的状态进行操作。你需要下载一些提交，然后创建一些新分支，再合并这些分支到其它分支, 但这用不了几个命令 :P</p>
-<p>解释
-//以下是初见笨方法(10/2)
+<pre tabindex="0"><code>//以下是初见笨方法(10/2)
 git fetch origin main:C2
 git fetch origin main:side
 git checkout foo
@@ -1296,24 +1499,33 @@ git branch -f main C6
 git branch -f side C2
 git branch -f foo C3
 git checkout main
-2333
-//优化解：
-git pull origin bar:foo
+</code></pre><p>2333</p>
+<p>//优化解：</p>
+<pre tabindex="0"><code>git pull origin bar:foo
 git pull origin main:side
-至此，终符击破！！！！！！！！！！！！
-STAGE EX2 ALL CLEAR!!!!!!!!!!!!
-Congratulations！ 感谢你看到这里（虽然说可能这里没几个人会看） 谢谢苗爷指导，各位的陪伴和自己没有中途而废
-信仰是为了虚幻之人.</p>
+</code></pre><p>至此，终符击破！！！！！！！！！！！！</p>
+
+
+<h3 class="relative group">STAGE EX2 ALL CLEAR!!!!!!!!!!!! 
+    <div id="stage-ex2-all-clear" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#stage-ex2-all-clear" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>Congratulations！ 感谢你看到这里（虽然说可能这里没几个人会看） 谢谢苗爷指导，各位的陪伴和自己没有中途而废</p>
 <p>评论：</p>
-<p>发 布
+<p>发 布<br>
 •
-CompJIN_WLAN 2023-07-02 11:26:50
-2023/7/2 11:25主要部分完成击破 EX面（远程）等会继续推进
+CompJIN_WLAN 2023-07-02 11:26:50<br>
+2023/7/2 11:25主要部分完成击破 EX面（远程）等会继续推进<br>
+• CompJIN_WLAN 2023-07-02 11:26:44<br>
+2023/7/2 11:25主要部分完成击破 EX面（远程）等会继续推进<br>
 •
-CompJIN_WLAN 2023-07-02 11:26:44
-2023/7/2 11:25主要部分完成击破 EX面（远程）等会继续推进
-•
-xie_lzh 2023-07-02 10:44:20
+xie_lzh 2023-07-02 10:44:20<br>
 好好好</p>
 <p>来自 <a href="https://www.luogu.com.cn/blog/RhodesIsland/gitlearning" target="_blank">https://www.luogu.com.cn/blog/RhodesIsland/gitlearning</a></p>
 
