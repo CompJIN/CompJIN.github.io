@@ -3,14 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://CompJIN.github.io/</loc>
-    <lastmod>2025-02-02T13:41:52+08:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-02-02T14:08:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://CompJIN.github.io/posts/</loc>
-    <lastmod>2025-02-02T13:41:52+08:00</lastmod>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-02-02T14:08:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
