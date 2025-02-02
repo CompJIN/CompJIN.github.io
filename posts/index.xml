@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on CompJIN&#39;s CheakPoint</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on CompJIN&#39;s CheakPoint</description>
+    <title>Posts on CompJIN&#39;s CheckPoint</title>
+    <link>https://CompJIN.github.io/posts/</link>
+    <description>Recent content in Posts on CompJIN&#39;s CheckPoint</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2025 </copyright>
-    <lastBuildDate>Sun, 02 Feb 2025 14:08:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Feb 2025 14:08:54 +0800</lastBuildDate><atom:link href="https://CompJIN.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Basic test#1</title>
-      <link>http://localhost:1313/posts/basic/</link>
+      <link>https://CompJIN.github.io/posts/basic/</link>
       <pubDate>Sun, 02 Feb 2025 14:08:54 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/basic/</guid>
+      <guid>https://CompJIN.github.io/posts/basic/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>关于LearnGitBranching网站学习的个人题解</title>
-      <link>http://localhost:1313/posts/learngitbranching/</link>
+      <link>https://CompJIN.github.io/posts/learngitbranching/</link>
       <pubDate>Sun, 02 Feb 2025 14:08:54 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/learngitbranching/</guid>
+      <guid>https://CompJIN.github.io/posts/learngitbranching/</guid>
       <description></description>
       
     </item>
