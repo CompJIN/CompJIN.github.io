@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://CompJIN.github.io/posts/newpage/</loc>
+    <loc>https://CompJIN.github.io/posts/</loc>
     <lastmod>2025-02-03T21:17:38+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://CompJIN.github.io/posts/</loc>
+    <loc>https://CompJIN.github.io/posts/learngitbranching/</loc>
     <lastmod>2025-02-03T21:17:38+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -22,12 +22,6 @@
   </url>
   <url>
     <loc>https://CompJIN.github.io/posts/basic/</loc>
-    <lastmod>2025-02-02T14:08:54+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://CompJIN.github.io/posts/learngitbranching/</loc>
     <lastmod>2025-02-02T14:08:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
